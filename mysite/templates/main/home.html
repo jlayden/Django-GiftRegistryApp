@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="home page-content">
+  <div class="container">
+    <div class="row">
+       <div class="col-12">
+        <h1>Login</h1>
+        {% include "partials/login.html" %}
+      </div>
+    </div>
+    <div class="row">
+      {% if msg %}
+        <h5 class="text-info text-center">{{msg}}</h5>
+      {% elif errmsg %}
+        <h5 class="text-danger text-center">{{errmsg}}</h5>
+      {% else %}
+        <h5 class="text-center">Not a User?</h5>
+      {% endif %}
+      <a href="/registration" class="btn link-secondary"><strong>Register Now </strong></a>
+    </div>
+  </div>
+</div>
+{% endblock %}

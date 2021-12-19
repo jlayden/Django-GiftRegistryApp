@@ -1,0 +1,173 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+  width: auto;
+  padding-top: 56px;
+  /* background: #cecece; */
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  max-width:320px;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 767px){
+  h1 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.75rem;
+  }
+}
+
+.btn {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.navbar .container {
+  justify-content: center;
+}
+
+.navbar a.navbar-brand,
+.navbar .nav-item a.nav-link {
+  transition: all .1s ease-in;
+}
+
+header .navbar a.navbar-brand {
+  color: rgba(255,255,255,.75);
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+header .navbar a.navbar-brand:hover {
+  color:#FFFFFF;
+}
+
+header .navbar .nav-item a.nav-link:hover {
+  color: rgba(255,255,255,1);
+}
+
+header .navbar .nav-item {
+  padding: 0 1rem;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+header .navbar .nav-item a.nav-link {
+  display: block;
+  position: relative;
+  padding: 0.1rem 0;
+}
+
+header .navbar .nav-item a.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1rem;
+  background-color: #FFFFFF;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+header .navbar .nav-item a.nav-link:hover::after,
+header .navbar .nav-item a.nav-link:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.1rem, 0);
+}
+
+section {
+  padding: 3rem 0;
+}
+
+.main {
+  flex: 1;
+}
+
+.page-content {
+  max-width:320px;
+  margin: 0 auto;
+}
+
+/* HOME PAGE */
+form {
+  margin: 2rem 0;
+}
+
+form label {
+  margin-bottom: .25rem;
+}
+
+form select,
+form input {
+  margin-bottom: 1rem;
+}
+
+/* LOG PAGE */
+.log table {
+  width: 100%;
+  height: auto;
+  max-width: 320px;
+}
+
+.log table th {
+  font-weight: 700;
+}
+
+/* .log table tr:first-of-type {
+  border-bottom: 1px solid #FFF;
+} */
+
+.log table td {
+  margin-right: 1rem;
+  color: #FF0000;
+  font-family: monospace;
+  font-size: 0.85rem;
+}
+
+/* FLEX TABLE */
+.log .table header, .log .table .row {
+  display: flex;
+}
+
+.log .table .col {
+  flex: 1;
+}
+
+select {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+/* GIFTS */
+.gifts form {
+  margin: 1rem 0 3rem;
+}
+
+.gifts h3 {
+  text-decoration: underline;
+}

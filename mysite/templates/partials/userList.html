@@ -1,0 +1,16 @@
+{% if msg %}
+<br>
+<h5 class="text-left">Already a User?</h5>
+<a href="/registration" class="btn link-secondary"><strong>Login Now </strong></a>
+<br><br>
+<h5 class="text-left">Not a User?</h5>
+<a href="/registration" class="btn link-secondary"><strong>Register Now </strong></a>
+{% else %}
+<ol class="user-list">
+{% for user in users %}
+  <li>
+    <a href="/othergifts?name={{user.name}}"><strong>{{user.name}}</strong></a>
+  </li>
+{% endfor %}
+</ol>
+{% endif %}

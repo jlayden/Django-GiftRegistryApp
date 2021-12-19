@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="home page-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1>Gift Registry for {% for key, value in request.GET.items %}{{value}}{% endfor %}</h1>
+        {% include "partials/giftList.html" %}
+      </div>
+      {% if msg %}<h2 class="text-danger">{{msg}}</h2>{% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="home page-content gifts">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1>Your Gifts</h1>
+        {% if msg %}
+          <h2 class="text-danger">{{msg}}</h2>
+        {% else %}
+        {% include "partials/addGift.html" %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
